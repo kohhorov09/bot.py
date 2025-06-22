@@ -47,7 +47,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     # Obuna bo‘lganlar uchun
-    game_button = InlineKeyboardButton("🎮 Join Game", web_app=WebAppInfo(url="https://2-web-blue.vercel.app/"))
+    game_button = InlineKeyboardButton("🎮 Join Game", web_app=WebAppInfo(url="https://coin-ton.vercel.app/"))
     reply_markup = InlineKeyboardMarkup([[game_button]])
     await update.message.reply_text("✅ Obuna tasdiqlandi. O‘yinni boshlang!", reply_markup=reply_markup)
 
@@ -155,7 +155,7 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.edit_message_text("🚫 Siz hali ham barcha kanallarga obuna bo‘lmagansiz:", reply_markup=reply_markup)
         else:
-            game_button = InlineKeyboardButton("🎮 Join Game", web_app=WebAppInfo(url="https://2-web-blue.vercel.app/"))
+            game_button = InlineKeyboardButton("🎮 Join Game", web_app=WebAppInfo(url="https://coin-ton.vercel.app/"))
             reply_markup = InlineKeyboardMarkup([[game_button]])
             await query.edit_message_text("✅ Obuna tekshirildi. O‘yinga kirishingiz mumkin!", reply_markup=reply_markup)
     
